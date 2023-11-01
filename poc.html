@@ -1,0 +1,15 @@
+
+<button onclick="openPopup()">Open Popup</button>
+
+<script>
+  function openPopup() {
+    var popup = window.open('', '_blank', 'width=500,height=500');
+    var iframe = document.createElement('iframe');
+    iframe.src = 'iframe-bypass.html';
+    iframe.sandbox = 'allow-scripts allow-popups allow-same-origin';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.border = 'none';
+    popup.document.body.appendChild(iframe);
+  }
+</script>
